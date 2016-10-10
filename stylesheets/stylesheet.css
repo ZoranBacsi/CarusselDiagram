@@ -423,3 +423,99 @@ Small Device Styles
   }
 
 }
+
+html,body { 
+  margin: 0px; 
+  padding: 0px;
+}
+
+.tree { 
+  display: block; 
+  position: relative; 
+  text-align: center; 
+  font-size: 0px; 
+  padding: 50px; 
+}
+
+.tree ul { 
+  display: inline-block; 
+  position: relative; 
+  list-style: none; 
+  width: auto; 
+  padding: 0px; 
+  margin: auto; 
+  padding-top: 15px; 
+  white-space: nowrap; 
+}
+
+.tree ul:before { 
+  content: ''; 
+  position: absolute; 
+  top: 0px; 
+  left: 50%; 
+  height: 15px; 
+  border-right: 1px solid #000; 
+}
+
+.tree > ul { 
+  padding: 0px; 
+}
+
+.tree > ul:before { 
+  display: none; 
+}
+
+.tree li { 
+  display: inline-block; 
+  position: relative; 
+  padding: 15px 15px; 
+}
+
+.tree li:not(:last-child):before { 
+  content: ''; 
+  position: absolute; 
+  top: 0px; 
+  left: 50%; 
+  height: 15px; 
+  width: 50%; 
+  border-left: 1px solid #000; 
+  border-top: 1px solid #000; 
+}
+
+.tree li:not(:first-child):after { 
+  content: ''; 
+  position: absolute; 
+  top: 0px; 
+  right: 50%; 
+  height: 15px; 
+  width: 50%; 
+  border-top: 1px solid #000; 
+}
+
+.tree li:not(:first-child):last-child:after { 
+  border-right: 1px solid #000; 
+}
+
+.tree li > div { 
+  display: block; 
+  position: relative; 
+  font-size: 14px; 
+  margin: auto; 
+  width: 120px; 
+  height: 20px; 
+  line-height: 20px; 
+  padding: 10px; 
+  border: 1px solid #000; 
+  background-color: #FFF; 
+  border-radius: 5px; 
+}
+
+/* 2. szint */
+.tree > ul > li > ul > li > div { 
+  height: 60px; 
+}
+/* 3. szint */
+.tree > ul > li > ul > li > ul > li > div { 
+  background-color: #EEE;
+  color: red; 
+} 
